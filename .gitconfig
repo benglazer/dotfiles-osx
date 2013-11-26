@@ -1,0 +1,31 @@
+[user]
+	name = Ben Glazer
+	email = ben@classroomsense.com
+[core]
+	excludesfile = /Users/ben/.gitignore
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	ui = true
+[alias]
+	st = status -s -b
+	df = diff
+	dw = diff --word-diff
+	co = checkout
+	ci = commit
+	br = branch
+	l  = log --oneline --decorate --graph --all --date=relative
+	t = tag -a
+
+	fixup = commit --amend -C HEAD
+	timeline = log --graph --branches --pretty=oneline --decorate
+	untracked-files = ls-files -o --exclude-standard
+	ignored-files = ls-files --others -i --exclude-standard
+	modified-files = ls-files -m
+[apply]
+	whitespace = fix
+[credential]
+	helper = osxkeychain
