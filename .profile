@@ -10,6 +10,11 @@ if [ -d "/usr/local/bin" ] ; then
     PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 fi
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+
 # Java vars
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 
