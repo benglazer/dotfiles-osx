@@ -9,7 +9,7 @@
 	diff = auto
 	branch = auto
 	interactive = auto
-	ui = true
+	ui = auto
 [alias]
 	st = status -s -b
 	df = diff
@@ -19,6 +19,7 @@
 	br = branch
 	l  = log --oneline --decorate --graph --all --date=relative
 	t = tag -a
+	lp = log --pretty=format:'%C(white)%h%C(auto)%d%Creset %s %C(cyan)(%cr)%Creset - %C(yellow)%an%Creset' --abbrev-commit --date=relative --graph --all
 
 	fixup = commit --amend -C HEAD
 	timeline = log --graph --branches --pretty=oneline --decorate
