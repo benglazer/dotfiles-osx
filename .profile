@@ -25,3 +25,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
+# Add primary ssh key to ssh-agent.
+key_file=~/.ssh/id_rsa
+[[ -z $(ssh-add -L | grep $key_file) ]] && ssh-add $key_file
