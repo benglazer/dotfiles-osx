@@ -30,15 +30,10 @@ alias gm='git merge'
 # homebrew
 alias bi='brew info'
 alias bui='brew uses --installed'
-alias bu='brew uninstall'
+alias bun='brew uninstall'
 alias bl='brew list'
-alias bup='brew update'
+alias bu='brew update'
 alias bug='brew upgrade'
-
-# django manage.py for eduvant apps
-alias mmb='./manage.py migrate base'
-alias msba='./manage.py schemamigration base --auto'
-alias mta='./manage.py test api'
 
 # postgres
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -47,12 +42,7 @@ alias dumpdb='pg_dump -Fc --no-owner eduvant-dev -f'  # then provide a dumpfile 
 alias loaddb='pg_restore -d eduvant-dev -O -x -Fc '  # then provide an input file name
 alias resetdb='dropdb eduvant-dev && createdb eduvant-dev && loaddb'
 
-# virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
-source `which virtualenvwrapper.sh`
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'  # put everything in the virtualenv, even if it duplicates system site-packages
-
-# django project
+# django
 alias da='./manage.py'
 
 # csv
