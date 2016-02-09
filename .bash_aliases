@@ -104,7 +104,7 @@ alias sfkey='heroku config:get SFUSD_OVERRIDE_PASSWORD -a edvnt-api | pbcopy'
 # sync3
 alias basis-extract='workon sync3_extract && PYTHONPATH=. foreman run sync3_extract/bin/sync3_extract'
 alias basis-transform='workon sync3_transform && foreman run sync3_transform/bin/sync3_transform'
-alias basis-load='workon api && foreman run ./manage.py loadcsv'
+alias basis-load='workon api && foreman run ./manage.py loadcsv --archive'
 
 # stellar
 alias stellar-delete-all='for s in $(stellar list | sed '\''s/: .*ago//'\'') ; do stellar remove 2015-10-30T06:57:09,454887000-0500; done'
