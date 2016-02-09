@@ -21,4 +21,3 @@ source `which virtualenvwrapper.sh`
 
 ### pip
 export PIP_REQUIRE_VIRTUALENV=true  # pip runs only if a virtualenv is active
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache  # cache pip-installed packages
