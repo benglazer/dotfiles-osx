@@ -11,13 +11,6 @@ if [ -d "$HOME/bin" ]; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# Add primary ssh key to ssh-agent.
-key_file=~/.ssh/id_rsa
-[[ -z $(ssh-add -L | grep $key_file) ]] && ssh-add $key_file
-
-### virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
-source `which virtualenvwrapper.sh`
-
-### pip
-export PIP_REQUIRE_VIRTUALENV=true  # pip runs only if a virtualenv is active
+# Load extensions.
+source "$HOME/.profile-extensions/pyenv.sh"
+source "$HOME/.profile-extensions/ssh-agent.sh"

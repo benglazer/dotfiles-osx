@@ -1,2 +1,5 @@
-.DS_Store
-*.pyc
+# IntelliJ project files
+.idea
+*.iml
+out
+gen

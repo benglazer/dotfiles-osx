@@ -72,7 +72,7 @@ alias gbr='git branch'
 alias gcomb='gco master -b'
 alias gdf='git df'
 alias gdfs='gdf --staged'
-alias gf='git fetch -p'
+alias gf='git fetch --prune'
 alias gm='git merge'
 alias gg='git grep'
 
@@ -94,10 +94,6 @@ alias resetdb='dropdb eduvant-dev && createdb eduvant-dev && loaddb'
 # django
 alias da='./manage.py'
 
-# foreman
-alias fr='foreman run'
-alias fs='foreman start'
-
 # heroku
 alias sfkey='heroku config:get SFUSD_OVERRIDE_PASSWORD -a edvnt-api | pbcopy'
 
@@ -107,4 +103,4 @@ alias basis-transform='workon sync3_transform && foreman run sync3_transform/bin
 alias basis-load='workon api && foreman run ./manage.py loadcsv --archive'
 
 # stellar
-alias stellar-delete-all='for s in $(stellar list | sed '\''s/: .*ago//'\'') ; do stellar remove 2015-10-30T06:57:09,454887000-0500; done'
+alias stellar-delete-all='for snapshot in $(stellar list | sed '\''s/: .*ago//'\''); do stellar remove $snapshot; done'
