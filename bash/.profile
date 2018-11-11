@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Prefer homebrew to local executables.
-if [ -d "/usr/local/bin" ]; then
+if [[ -d "/usr/local/bin" ]]; then
     PATH="/usr/local/bin:/usr/local/sbin:$PATH"
     PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 fi
 
 # Set PATH to include user's private bin if it exists.
-if [ -d "$HOME/bin" ]; then
+if [[ -d "$HOME/bin" ]]; then
     PATH="$HOME/bin:$PATH"
 fi
 

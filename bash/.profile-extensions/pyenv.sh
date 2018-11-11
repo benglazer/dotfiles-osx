@@ -22,5 +22,5 @@ latest_python3_stable() {
 
 mkvenvhere() {
     envname=${1:-$(basename $(pwd))}
-    (pyenv virtualenv $(latest_python3_stable) $envname) && (echo $envname > .python-version)
+    (pyenv virtualenv $(latest_python3_stable) "${envname}") && (echo "${envname}" > .python-version)
 }
