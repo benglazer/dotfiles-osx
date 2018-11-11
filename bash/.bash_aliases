@@ -74,6 +74,8 @@ alias gdfs='gdf --staged'
 alias gf='git fetch --prune'
 alias gm='git merge'
 alias gg='git grep'
+alias gss='git stash save'
+alias gsp='git stash pop'
 
 # homebrew
 alias bi='brew info'
