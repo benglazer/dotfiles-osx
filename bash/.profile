@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo Running .profile
+
 # Prefer homebrew to local executables.
 if [[ -d "/usr/local/bin" ]]; then
     PATH="/usr/local/bin:/usr/local/sbin:$PATH"

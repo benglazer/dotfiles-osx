@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo Running .bashrc
+
 # Load aliases from .bash_aliases.
 if [[ -f "${HOME}/.bash_aliases" ]]; then
     source "${HOME}/.bash_aliases"
