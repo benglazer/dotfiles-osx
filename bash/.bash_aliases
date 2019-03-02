@@ -40,7 +40,7 @@ alias mkdir='mkdir -p'
 alias find='find .'
 
 # Update OS X Software, Ruby gems, and Homebrew kegs
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; sudo gem update --system; sudo gem update'  # npm install npm -g; npm update -g;
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo gem update --system; sudo gem update'  # npm install npm -g; npm update -g;
 
 # fancy one-liners
 alias webserver='python -m SimpleHTTPServer 8080'
@@ -83,7 +83,7 @@ alias bui='brew uses --installed'
 alias bun='brew uninstall'
 alias bl='brew list'
 alias bu='brew update'
-alias bup='brew upgrade --all'
+alias bup='brew upgrade'
 
 # postgres
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
