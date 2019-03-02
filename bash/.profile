@@ -14,5 +14,6 @@ if [[ -d "$HOME/bin" ]]; then
 fi
 
 # Load extensions.
-source "$HOME/.profile-extensions/pyenv.sh"
 source "$HOME/.profile-extensions/ssh-agent.sh"
+source "$HOME/.profile-extensions/pyenv.sh"
+source "$HOME/.profile-extensions/nvm.sh"
