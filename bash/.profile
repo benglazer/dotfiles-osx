@@ -8,7 +8,10 @@ if [[ -d "/usr/local/bin" ]]; then
     PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 fi
 
-# Set PATH to include user's private bin if it exists.
+# Set PATH to include user's private bins if they exist.
+if [[ -d "$HOME/.local/bin" ]]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 if [[ -d "$HOME/bin" ]]; then
     PATH="$HOME/bin:$PATH"
 fi
